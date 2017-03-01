@@ -8,4 +8,4 @@ The main idea of this sample is illustration of how to integrate Forge OAuth
  expiration time along with scope for each token was excluded from this
  sample, but will appear in a more advanced version.
 
-![](img\screen_01.png)
+![](img/screen_01.png)
