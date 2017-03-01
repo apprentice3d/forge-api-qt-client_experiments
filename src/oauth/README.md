@@ -26,6 +26,8 @@ This type of token is given directly to the application. To get a
 ```cpp
 #include "oauth/twoleggedapi.h"
 
+...
+
 // create an instance of TwoLeggedApi and set the secrets
 Forge::TwoLeggedApi connector;
 connector.set_client_id("F5M2IA7AAdenisKgrigormSNQYAFAg5T");
@@ -55,6 +57,9 @@ QString scope = Forge::setScopes(Forge::DATA::READ,
 // if not using helper function, you can call directly with
 // connector.getTokenWithScope("data:read data:write");
 connector.getTokenWithScope(scope);
+
+...
+
 ```
 In your terminal, you should get a result similar to following one:
 ```
