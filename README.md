@@ -33,4 +33,4 @@ Copy the content of [src](./src) folder from this repo into your project
 Each part of this SDK is presented with a README with appropriate
  tutorial content:
 
- - [2-legged token acquiring](samples)
+ - [2-legged token acquiring](src/oauth)
