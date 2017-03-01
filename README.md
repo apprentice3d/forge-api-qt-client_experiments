@@ -18,7 +18,7 @@ target="_blank">Design Automation</a>.
 -->
 ### Requirements
 
-* Java version Qt 5.3 and above.
+* Qt 5.3 and above.
 * A registered app on the <a
   href="https://developer.autodesk.com/myapps" target="_blank">Forge
   Developer portal</a>.

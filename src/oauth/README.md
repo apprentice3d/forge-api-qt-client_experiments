@@ -63,3 +63,6 @@ Got token:
 "Qz8QAdummyrtokenaibNCBi09XFh"
 43199
 ```
+
+For an illustration of integrating ***TwoLeggedApi*** in you application,
+ please see the [TwoLeggedTokenUtility](..\..\samples\TwoLeggedTokenUtility) sample.
