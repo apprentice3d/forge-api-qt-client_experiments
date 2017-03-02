@@ -70,4 +70,4 @@ Got token:
 ```
 
 For an illustration of integrating ***TwoLeggedApi*** in you application,
- please see the [TwoLeggedTokenUtility](..\..\samples\TwoLeggedTokenUtility) sample.
+ please see the [TwoLeggedTokenUtility](../../samples/TwoLeggedTokenUtility) sample.
