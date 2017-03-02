@@ -47,7 +47,7 @@ install:
 
 script:
   - qmake -v
-  - qmake -r
+  - qmake -r samples/TwoLeggedTokenUtility/
   - make
 
 notifications:
