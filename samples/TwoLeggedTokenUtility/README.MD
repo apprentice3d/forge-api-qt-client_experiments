@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/apprentice3d/forge-api-qt-client.svg?branch=master)](https://travis-ci.org/apprentice3d/forge-api-qt-client)
+
 # 2-legged Token Utility
 A small utility for getting 2-legged access tokens with different scopes.
 
