@@ -23,6 +23,8 @@ public:
 
 };
 
+
+// Used to form the content of requests
 class HttpRequestInput {
 
 public:
@@ -41,7 +43,6 @@ public:
 	void add_file(QString variable_name, QString local_filename, QString request_filename, QString mime_type);
 
 };
-
 
 
 

@@ -21,12 +21,12 @@ void Forge::BaseApi::set_host(const QString& host)
 	m_host = host;
 }
 
-QString Forge::BaseApi::get_authenticate_endpoint() const
+QString Forge::BaseApi::get_endpoint() const
 {
 	return m_endpoint;
 }
 
-void Forge::BaseApi::set_authenticate_endpoint(const QString& endpoint)
+void Forge::BaseApi::set_endpoint(const QString& endpoint)
 {
 	m_endpoint = endpoint;
 }

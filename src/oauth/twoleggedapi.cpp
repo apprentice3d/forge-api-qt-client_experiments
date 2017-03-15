@@ -1,5 +1,4 @@
 #include "twoleggedapi.h"
-#include "httprequest.h"
 
 using namespace Forge;
 
@@ -11,9 +10,7 @@ TwoLeggedApi::TwoLeggedApi(QObject *parent)
 	m_endpoint = QString("/authentication/v1/authenticate");
 }
 
-TwoLeggedApi::~TwoLeggedApi()
-{
-}
+
 
 
 void TwoLeggedApi::getTokenWithScope(QString scope)
@@ -27,21 +24,19 @@ void TwoLeggedApi::getTokenWithScope(QString scope)
 	input.add_var("grant_type", "client_credentials");
 	input.add_var("scope", scope);
 
+
 	connect(worker, &HttpRequestWorker::on_execution_finished,
-		this, &TwoLeggedApi::authenticationCallback);
+		[=](HttpRequestWorker* done)
+	{
+//		Bearer* output = new Bearer(done->m_response, this);
+		Bearer* output = new Bearer(done->m_response);
+		output->set_scope(scope);
+		output->set_creation_time(QDateTime::currentMSecsSinceEpoch());
+		emit authenticateSignal(output, done->m_error_string);
+		done->deleteLater();
+	});
 
 	worker->execute(&input);
-}
-
-void TwoLeggedApi::authenticationCallback(HttpRequestWorker* worker)
-{
-	if (worker->m_error_type != QNetworkReply::NoError)
-	{
-		qDebug() << "Error: " << worker->m_error_string;
-	}
-
-	Bearer* output = new Bearer(worker->m_response);
-	emit authenticateSignal(output);
 }
 
 

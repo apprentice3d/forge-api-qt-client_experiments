@@ -1,7 +1,8 @@
 #pragma once
 
-#include "baseapi.h"
-#include "httprequest.h"
+#include "../shared/baseapi.h"
+#include "../shared/httprequest.h"
+#include "bearer.h"
 
 namespace Forge {
 class TwoLeggedApi : public BaseApi
@@ -11,21 +12,20 @@ class TwoLeggedApi : public BaseApi
 public:
 	
 	TwoLeggedApi(QObject *parent = nullptr);
-	~TwoLeggedApi();
+	~TwoLeggedApi() = default;
 
 
-	void getTokenWithScope(QString scope) override;
+	void getTokenWithScope(QString scope);
 	void set_client_id(const QString& client_id);
 	void set_client_secret(const QString& client_secret);
 	QString get_client_id() const;
 	QString get_client_secret() const;
 
 signals:
-	void authenticateSignal(Bearer* summary);
+	void authenticateSignal(Bearer* bearer, QString error);
 
 
 private:
-	void authenticationCallback(HttpRequestWorker* worker);
 	QString m_client_id;
 	QString m_client_secret;
 

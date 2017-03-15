@@ -2,9 +2,6 @@
 
 using namespace Forge;
 
-
-
-
 HttpRequestInput::HttpRequestInput()
 {
 	initialize();
@@ -264,7 +261,7 @@ void HttpRequestWorker::execute(HttpRequestInput* input)
 	// prepare connection
 
 	QNetworkRequest request = QNetworkRequest(QUrl(input->m_url_str));
-	request.setRawHeader("User-Agent", "Swagger-Client");
+	request.setRawHeader("User-Agent", "Forge-Qt-SDK");
 	foreach(QString key, input->m_headers.keys()) {
 		request.setRawHeader(key.toStdString().c_str(), input->m_headers.value(key).toStdString().c_str());
 	}

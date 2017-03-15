@@ -1,16 +1,24 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2017-02-16T14:40:49
-#
-#-------------------------------------------------
+QT += core network
+QT -= gui
 
-QT       += core gui widgets network
+CONFIG += c++11
 
-TARGET = TwoLeggedTokenUtility
+TARGET = BucketExplorer
+CONFIG += console
+CONFIG -= app_bundle
+
 TEMPLATE = app
 
+SOURCES += main.cpp \
+    ../../src/oss/bucketapi.cpp \
+    ../../src/oauth/bearer.cpp \
+    ../../src/oauth/twoleggedapi.cpp \
+    ../../src/oss/bucket.cpp \
+    ../../src/shared/baseapi.cpp \
+    ../../src/shared/httprequest.cpp
+
 # The following define makes your compiler emit warnings if you use
-# any feature of Qt which as been marked as deprecated (the exact warnings
+# any feature of Qt which as been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
@@ -20,18 +28,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-
-SOURCES += main.cpp\
-        mainwindow.cpp \
-    ../../src/shared/baseapi.cpp \
-    ../../src/oauth/bearer.cpp \
-    ../../src/shared/httprequest.cpp \
-    ../../src/oauth/twoleggedapi.cpp
-
-HEADERS  += mainwindow.h \
+HEADERS += \
+    bucketapi.h \
     ../../src/shared/baseapi.h \
     ../../src/oauth/bearer.h \
-    ../../src/shared/httprequest.h \
-    ../../src/oauth/twoleggedapi.h
+    ../../src/oauth/twoleggedapi.h \
+    ../../src/oss/bucket.h \
+    ../../src/oss/bucketapi.h \
+    ../../src/shared/httprequest.h
 
-FORMS    += mainwindow.ui
+DISTFILES += \
+    ../../src/oauth/README.md
