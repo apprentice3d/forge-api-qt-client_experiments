@@ -250,3 +250,18 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+CMakeLists.txt
+samples/build-TwoLeggedTokenUtility-Desktop_Qt_5_8_0_MSVC2015_64bit2-Debug/
+samples/build-BucketExplorer-Desktop_Qt_5_7_1_clang_64bit-Debug/
+cmake-build-debug/
+samples/BucketExplorer/BucketExplorer.vcxproj
+samples/BucketExplorer/BucketExplorer.vcxproj.filters
+samples/build-TwoLeggedTokenUtility-Desktop_Qt_5_8_0_clang_64bit-Debug/
+samples/BucketExplorer/
+samples/TwoLeggedTokenUtility/GeneratedFiles/ui_mainwindow.h
+*.vcxproj
+*.filters
+samples/TwoLeggedTokenUtility/config.json
+samples/TwoLeggedTokenUtility/TwoLeggedTokenUtility.pro.user.c19ad36
+samples/TwoLeggedTokenUtility/mainwindow.ui.E15312
+samples/TwoLeggedTokenUtility/mainwindow.ui.I15312
